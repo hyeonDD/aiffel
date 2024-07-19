@@ -1,0 +1,8 @@
+data/models/
+data/mpii_human_pose_v1.tar.gz
+data/mpii_human_pose_v1_u12_2/
+data/mpii_human_pose_v1_u12_2.zip
+data/mpii.zip/
+data/my_models/
+data/tfrecords_mpii/
+data/images/
