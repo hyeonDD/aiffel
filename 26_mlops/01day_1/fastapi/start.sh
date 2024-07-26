@@ -1,0 +1,1 @@
+python3 fastapi_server/app.py

@@ -12,6 +12,12 @@ sed -i '' 's/fastapi/fastapi_server/g' pyproject.toml
 # 나머지 pyproject.toml 작성 (생략)
 poetry add fastapi
 poetry add uvicorn
+poetry install
+poetry shell
+# requirments.txt
+poetry export --without-hashes --without-urls -f requirements.txt --output requirements.txt
+# requirements.txt에서 세미콜론(;) 뒤로 지우기
+
 # fastapi_server/app.py 파일만들기
 # Dockerfile 만들기
 # compose 파일만들기
