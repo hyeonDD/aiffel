@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  redis:
+    container_name: redis
+    image: redislabs/redismod
+    networks:
+      - mlops-flask-redis-network
+    ports:
+      - "6379:6379"
+    environment:
+      - TZ=Asia/Seoul
+    restart: "no"
+  api:
+    container_name: web
+    build: ./
+    networks:
+      - mlops-flask-redis-network
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+    restart: "no"
+
+networks:
+  mlops-flask-redis-network:
+    external: true

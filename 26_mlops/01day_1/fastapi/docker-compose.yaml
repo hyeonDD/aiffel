@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  redis:
+    container_name: redis_db
+    image: redis:alpine
+    networks:
+      - mlops-fastapi-network
+    ports:
+      - "6379:6379"
+    environment:
+      - TZ=Asia/Seoul
+    restart: "no"
+  api:
+    container_name: fastapi-application
+    build: ./
+    networks:
+      - mlops-fastapi-network
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+    restart: "no"
+
+networks:
+  mlops-fastapi-network:
+    external: true
