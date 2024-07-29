@@ -21,6 +21,7 @@ poetry add scikit-learn pandas psycopg2-binary
 poetry shell
 # requirments.txt
 poetry export --without-hashes --without-urls -f requirements.txt --output requirements.txt
+# 내환경은 3.12.2 버전 이었어서 base 이미지(python:3.9-slim) 에 맞게 scipy 버전을 낮춤 (아래사진첨부)
 # requirements.txt 에서 scipy==1.14.0 으로 되어있는거 python 3.9는 지원하지 않아 scipy==1.13.1로 변경
 sed -i '' 's/scipy==1.14.0/scipy==1.13.1/g' requirements.txt
 
@@ -35,6 +36,14 @@ sed -i '' 's/scipy==1.14.0/scipy==1.13.1/g' requirements.txt
 # compose 파일만들기
 
 ```
+
+scipy 1.14.0 python 버전 requires [scipy 1.14.0](https://pypi.org/project/scipy/1.14.0/)
+
+![1.14.0](images/scipy_1_14_0.png)
+
+scipy 1.13.1 python 버전 requires [scipy 1.13.1](https://pypi.org/project/scipy/1.13.1/)
+
+![1.13.1](images/scipy_1_13_1.png)
 
 ## iris 데이터셋 실행
 
