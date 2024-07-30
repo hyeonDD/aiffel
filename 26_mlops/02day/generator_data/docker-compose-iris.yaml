@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   postgres-server:
-    platform: linux/amd64
+    platform: linux/arm64
     image: postgres:14.0
     container_name: postgres-server
     ports:
@@ -18,7 +18,7 @@ services:
       - mlops-postgres-network
 
   data-generator:
-    platform: linux/amd64
+    platform: linux/arm64
     build:
       context: .
       dockerfile: Dockerfile_iris
