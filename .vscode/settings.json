@@ -1,0 +1,3 @@
+{
+  "python.analysis.extraPaths": ["./26_mlops/04day/fastapi/fastapi_server"]
+}
