@@ -44,6 +44,8 @@ docker compose up -d --build
 
 ### db에 데이터 넣는 작업까지만 완료..
 
+![훈련용 db](images/learning_db.png)
+
 TODO
 
 - model train
